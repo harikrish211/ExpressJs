@@ -1,6 +1,9 @@
+const path = require('path');
+
 const getdata=(req,res)=>
 {
-    res.send("Fetching all products");
+    res.sendFile(path.join(__dirname, '../view/productForm.html'));
+    
 
 }
 
