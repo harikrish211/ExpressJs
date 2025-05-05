@@ -1,6 +1,8 @@
+const path=require('path');
+
 const getdata=(req,res)=>
 {
-    res.send("Fetching all users");
+    res.sendFile(path.join(__dirname, '../view/home.html'));
 
 
 }

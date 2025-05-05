@@ -1,8 +1,8 @@
 const getdata=(req,res)=>
 {
 
-        const { userId } = req.params;
-        res.send(`Fetching cart for user with ID: ${userId}`);
+        
+        res.send("<h1>Cart Page</h1>");
 
 }
 const postdata=(req,res)=>{
