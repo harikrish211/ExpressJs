@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 
-const studentRoutes = require('./routes/students');
+const studentRoutes = require('./routes/student');
 const courseRoutes = require('./routes/courses');
 
 // Home Route
@@ -21,5 +21,5 @@ app.use((req, res) => {
 
 // Start Server
 app.listen(3000, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running `);
 });
