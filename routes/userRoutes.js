@@ -1,24 +1,13 @@
 const express=require('express');
-const route=express.Router();  
+const route=express.Router(); 
+const controller=require('../controller/usercontroller');
 
-route.get('/',(req,res)=>
-{
-    res.send("Fetching all users");
-
-})
+route.get('/',controller.getdata);
 
 
-route.post('/',(req,res)=>
-    {
-        res.send("Adding a new user");
-    
-    })
+route.post('/',controller.postdata);
 
-    route.get('/:id', (req, res) => {
-        const { id } = req.params;
-        res.send(`Fetching user with ID: ${id}`);
-      });
-    
+    route.get('/:id',controller.getdatabyid);
 
 
 

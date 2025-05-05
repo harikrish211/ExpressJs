@@ -1,27 +1,17 @@
 const express=require('express');
 const route=express.Router();   
+const production=require('../controller/productioncontroller');
 
 
 
-route.get('/',(req,res)=>
-    {
-        res.send("Fetching all products");
-    
-    })
+    route.get('/',production.getdata);
     
     
-    route.post('/',(req,res)=>
-        {
-            res.send("Adding a new product");
+    route.post('/',production.postdata);
         
-        })
-    
-    
-        route.get('/:id', (req, res) => {
-            const { id } = req.params;
-            res.send(`Fetching product with ID: ${id}`);
-          });
-
+        route.get('/:id',production.getdatabyid);
+            
+          
 
 
 
